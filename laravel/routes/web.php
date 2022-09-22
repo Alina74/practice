@@ -24,6 +24,7 @@ Route::post('/register',[\App\Http\Controllers\UserController::class, 'registerP
 Route::middleware('auth')->group(function (){
     Route::get('/static-manager',[\App\Http\Controllers\MainController::class, 'staticManager'])->name('staticManager');
     Route::get('/users', [\App\Http\Controllers\UserController::class, 'users'])->name('users');
+    Route::get('/user', [\App\Http\Controllers\UserController::class, 'user'])->name('user');
     Route::get('logout', [\App\Http\Controllers\UserController::class, 'logout'])->name('logout');
 });
 

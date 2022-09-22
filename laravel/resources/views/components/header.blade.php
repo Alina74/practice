@@ -28,6 +28,7 @@
                         @endguest
                         @auth
                             <li><a class="dropdown-item" href="{{route('logout')}}">Выход</a></li>
+                            <li><a class="dropdown-item" href="{{route('user')}}">Личный кабинет</a></li>
                         @endauth
                     </ul>
                 </li>

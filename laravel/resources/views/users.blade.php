@@ -16,7 +16,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @forelse($users as $user)
+                    @foreach($users as $user)
                     <tr>
                         <th scope="row">{{$user->id}}</th>
                         <td>{{$user->name}}</td>
@@ -24,9 +24,7 @@
                         <td>{{$user->size}}</td>
                         <td>{{$user->color}}</td>
                     </tr>
-                    @empty
-                        <th colspan="4">В системе нет пользователей</th>
-                    @endforelse
+                    @endforeach
                     </tbody>
                 </table>
             </div>

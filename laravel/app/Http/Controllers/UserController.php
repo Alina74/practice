@@ -51,4 +51,9 @@ class UserController extends Controller
         $users=User::all();
         return view('users', compact('users'));
     }
+    public function user()
+    {
+        $users=auth()->user();
+        return view('user', compact('users'));
+    }
 }
