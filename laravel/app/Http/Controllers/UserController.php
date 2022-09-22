@@ -39,4 +39,16 @@ class UserController extends Controller
         User::create($data);
         return back()->with(['success'=>true]);
     }
+    public function logout(Request $request)
+    {
+        auth()->logout();
+        $request->session()->regenerate();
+        return redirect()->route('welcome');
+    }
+
+    public function users()
+    {
+        $users=User::all();
+        return view('users', compact('users'));
+    }
 }

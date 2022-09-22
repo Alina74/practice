@@ -13,6 +13,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('staticManager')}}">Статическая информация</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('users')}}">Пользователи</a>
+                    </li>
                 @endauth
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -24,7 +27,7 @@
                             <li><a class="dropdown-item" href="{{route('register')}}">Регистрация</a></li>
                         @endguest
                         @auth
-                            <li><a class="dropdown-item" href="#">Выход</a></li>
+                            <li><a class="dropdown-item" href="{{route('logout')}}">Выход</a></li>
                         @endauth
                     </ul>
                 </li>
